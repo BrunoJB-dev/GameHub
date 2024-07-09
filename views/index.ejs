@@ -13,8 +13,9 @@
       <nav>
         <ul>
           <li><a href="/">Accueil</a></li>
-          <li><a href="/fourchette">Fourchette</a></li>
-          <li><a href="/diceroller">Diceroller</a></li>
+          <% for (const index in games) { %>
+            <li><a href="/game/<%= games[index].name.toLowerCase() %>"><%= games[index].title %></a></li>
+         <% } %>
         </ul>
       </nav>
     </header>

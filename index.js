@@ -12,14 +12,14 @@ app.set("view engine", "ejs");
 
 
 app.get("/", (req, res) => {
-    res.status(200).render("index", {});
+    res.status(200).render("index", {games});
 });
 
 /*app.get("/fourchette", (req, res) => {
     res.status(200).render("fourchette", {});
 });*/
 
-app.get("/:gameName", (req,res) => {
+app.get("/game/:gameName", (req,res) => {
     const gameName = req.params.gameName;
     const game = games.find(gamesEl => gamesEl.name.toLocaleLowerCase() === gameName);
     if(game){
