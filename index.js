@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const games = require(`${__dirname}/games.json`);
+const games = require(`${__dirname}/public/games.json`);
 console.log(games);
 
 app.use(express.static('public'));

@@ -1,9 +1,12 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>GameHub</title>
   <link rel="stylesheet" href="/css/style.css">
+  <% if (typeof customStylesheet !== 'undefined') { %>
+    <link rel="stylesheet" href="<%= customStylesheet %>">
+  <% } %>
 </head>
 <body>
   <header>
@@ -15,12 +18,4 @@
         <li><a href="/game/diceroller">Diceroller</a></li>
       </ul>
     </nav>
-  </header>-->
-  <%- include('partials/header') %>
-
-  <h3>Jeu De La Fouchette</h3>
-
-  <script src="/js/fourchette.js"></script>
-
-</body>
-</html>
+  </header>
