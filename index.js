@@ -15,9 +15,7 @@ app.get("/", (req, res) => {
     res.status(200).render("index", {games});
 });
 
-/*app.get("/fourchette", (req, res) => {
-    res.status(200).render("fourchette", {});
-});*/
+
 
 app.get("/game/:gameName", (req,res) => {
     const gameName = req.params.gameName;
@@ -29,9 +27,7 @@ app.get("/game/:gameName", (req,res) => {
     }
   });
 
-/*app.get("/diceroller", (req, res) => {
-    res.status(200).render("diceRoller", {});
-});*/
+
 
 const port = 3000;
 app.listen(port, () => {
